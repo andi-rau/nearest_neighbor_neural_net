@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
 
 import MainPage from '../pages/main-page';
 import SecondPage from '../pages/second-page';
@@ -7,6 +7,7 @@ import SecondPage from '../pages/second-page';
 export default (props) => {
 
     return(
+        <BrowserRouter>
         <div className="app">
             <div>Header</div>
             <Switch>
@@ -15,7 +16,7 @@ export default (props) => {
             </Switch>
             <div>Footer</div>
         </div>
-
+        </BrowserRouter>
     )
 
 }
